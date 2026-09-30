@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Tarefas</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="style.css">
+</head>
+<body> 
+    <div class="sheet">
+    <header>
+        <h1>Tarefas</h1>
+        <p class="subtitle">Pagina para Você anotar suas Tarefas</p>
+        <div class="api-status">
+            <span class="dot" id="statusDot"></span>
+            <span id="statusText">Verificando conexão</span>
+        </div>
+    </header>
+
+    <div class="error-banner" id="errorBanner">
+        Não foi possivel conctar a API em <code id="apiUrlText"></code>
+        Verifique se o servidor está rodando (<code>npm start</code>) e se o Postgres está ativo 
+    </div>
+
+    <form class="add-row" id="addForm">
+        <input type="text" id="newTitle" placeholder="Nova Tarefa..." autocomplete="off" required>
+        <button type="submit" id="addBtn">Adicionar</button>
+    </form>
+    
+    <ul class="list" id="taskList"></ul>
+    <div class="empty-state" id="emptyState" style="display: none;">Nenhuma tarefa ainda. Adicione a primeira acima</div>
+
+    <p class="footer-count" id="footerCount"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

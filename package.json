@@ -1,0 +1,16 @@
+{
+ "name": "todo-api",
+ "version": "1.0.0",
+ "main": "SRC/server.js",
+ "scripts": {
+  "start": "node src/server.js"
+ },
+ "dependencies": {
+  "dotenv": "^17.4.2",
+  "express": "^5.2.1",
+  "pg": "^8.23.0"
+ }
+  }
+
+
+  
